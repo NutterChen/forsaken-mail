@@ -2,19 +2,32 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="临时邮箱,forsaken mail,disposable mail">
-  <title>Forsaken Mail</title>
-  <link href="https://lib.baomitu.com/semantic-ui/2.1.7/semantic.min.css" rel="stylesheet">
+  <title>电邮狗-为你提供安全免费高效的临时邮箱</title>
+  <meta name="keywords" content="电邮狗,临时邮箱,免费邮箱,free mail,接码邮箱,十分钟邮箱,e-mail.dog">
+  <meta name="Description" content="电邮狗-为你提供安全免费高效的临时邮箱，在线生成临时邮箱、十分钟邮箱（10分钟)、临时邮、临时Email、快速注册Email、24小时Mail，开通邮箱最长支持24小时，支持邮件转发，自动刷新！">
+  <link href="img/e-mail-dog.ico" rel="SHORTCUT ICON" />
+  <link rel="stylesheet" href="/css/semantic.min.css">
   <link rel="stylesheet" href="/css/app.css">
   <link rel="stylesheet" href="/css/prism.css">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b8a085a2fe027cd2f3bd4a4590b0937d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
 <div class="ui fixed borderless menu">
   <div class="ui text container" style="max-width: 100% !important;">
-    <div href="#" class="header item">
-      <img class="logo" src="//semantic-ui.com/examples/assets/images/logo.png" alt="logo">
-      Forsaken Mail
-    </div>
+    <a href="https://e-mail.dog/" target="_blank" >
+      <div href="#" class="header item">
+        <img class="logo" src="img/e-mail-dog.png" alt="logo">
+        电邮狗<br>e-mail.dog
+      </div>
+    </a>
     <div class="ui label item right floated mailaddress" style="width: 35%;">
       <button class="ui icon button">
         <i class="mail icon copyable"></i>
@@ -27,6 +40,29 @@
     </div>
   </div>
 </div>
+
+<div class="ui mains container">
+	<div class="ui icon message">
+		<i class="notched circle loading icon"></i>
+		<div class="content">
+			<div class="header">
+				服务正常运行中
+			</div>
+			<p>服务运行正常,请耐心等待系统处理您的来信!</p>
+		</div>
+	</div>
+</div>
+<div class="ui hidden divider"></div>
+<div class="ui container">
+<div class="ui piled segment">
+  <h4 class="ui header">如何使用</h4>
+  <p>1.当你打开此网页时，系统默认会为你分配一个邮件地址，刷新页面邮件地址不会改变.</p>
+  <p>2.若你觉得此邮箱地址的前缀不规范适用，可点击右上角'书写'按钮自定义邮箱前缀.</p>
+  <p>3.点击右上角邮箱地址前的'邮箱'按钮复制你获得的邮箱地址，粘贴在你欲使用的地方.</p>
+  <p>4.电邮狗不存储任何访客信息，亦不对任何因服务器问题或技术问题产生的不利结果负责.</p>
+</div>
+</div>
+
 <div class="ui main container">
   <div class="ui grid">
     <div class="row">
@@ -49,27 +85,38 @@
         <div class="ui card" id="mailcard">
           <div class="content">
             <i class="code icon right floated"></i>
-            <div class="header">我的邮件在哪里？</div>
+            <div class="header">邮件内容显示区</div>
           </div>
           <div class="content">
-            <p>等等就来( ͡° ͜ʖ ͡°) </p>
+            <p>收到邮件后请点击选择需要查看的邮件，它的详细内容将会显示在此处！</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="ui hidden divider"></div>
+<div class="ui container">
+	<div class="ui message">
+		<div class="header">
+		电邮狗，为你提供免费安全高效的临时邮箱
+		</div>
+	</div>
+</div>
+
 <div class="ui modal" id="raw">
   <div class="header">
   </div>
   <div class="content">
   </div>
 </div>
-</body>
-<script src="https://lib.baomitu.com/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://lib.baomitu.com/semantic-ui/2.1.7/semantic.min.js"></script>
-<script src="https://lib.baomitu.com/socket.io/1.3.7/socket.io.min.js"></script>
-<script src="https://lib.baomitu.com/clipboard.js/1.5.5/clipboard.min.js"></script>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/semantic-ui/2.1.7/semantic.min.js"></script>
+<script src="//cdn.bootcss.com/socket.io/1.3.7/socket.io.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.5/clipboard.min.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/prism.js"></script>
+</body>
 </html>
