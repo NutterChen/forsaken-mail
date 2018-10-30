@@ -1,6 +1,6 @@
 ## 搭建教程
 
-###安装邮件程序
+### 安装邮件程序
 ```
 #安装git
 yum install git -y
@@ -36,7 +36,7 @@ pm2 start bin/www
 pm2 startup
 pm2 save
 ```
-###配置443端口
+### 配置443端口
 ```
 #安装caddy
 wget -N --no-check-certificate https://www.moerats.com/usr/shell/Caddy/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh install http.filemanager
