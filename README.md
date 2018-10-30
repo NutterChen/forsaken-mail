@@ -1,3 +1,11 @@
+# e-mail.dog
+
+**电邮狗，为你提供免费安全高效的临时邮箱**
+
+e-mail.dog实在[Forsaken Mail](https://github.com/denghongcai/forsaken-mail "Forsaken Mail")基础上修改得到的一个临时邮箱服务。
+
+[→demo](https://e-mail.dog "→demo")
+
 ## 搭建教程
 
 ### 添加解析
@@ -25,7 +33,7 @@ nvm install 6.10.0
 node -v
  
 #下载项目源码
-git clone https://github.com/malaohu/forsaken-mail.git
+git clone https://github.com/nutterchen/forsaken-mail.git
 cd forsaken-mail
  
 #安装项目需要的库
