@@ -1,21 +1,9 @@
-Forsaken-Mail
-==============
-A self-hosted disposable mail service.
 
-[Online Demo](http://disposable.dhc-app.com)
 
-### Installation
-
-#### Setting up your DNS correctly
-
-In order to receive emails, your smtp server address should be made available somewhere. Two records should be added to your DNS records. Let us pretend that we want to receive emails at ```*@subdomain.domain.com```:
-* First an MX record: ```subdomain.domain.com MX 10 mxsubdomain.domain.com```. This means that the mail server for addresses like ```*@subdomain.domain.com``` will be ```mxsubdomain.domain.com```.
-* Then an A record: ```mxsubdomain.domain.com A the.ip.address.of.your.mailin.server```. This tells at which ip address the mail server can be found.
-
-You can fire up Mailin (see next section) and use an [smtp server tester](http://mxtoolbox.com/diagnostic.aspx) to verify that everything is correct.
-
-#### 搭建教程
+## 搭建教程
 ```
+**安装邮件程序
+
 #安装git
 yum install git -y
  
@@ -49,4 +37,20 @@ pm2 start bin/www
 #设置开机启动
 pm2 startup
 pm2 save
+
+**配置443端口
+
+#安装caddy
+wget -N --no-check-certificate https://www.moerats.com/usr/shell/Caddy/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh install http.filemanager
+
+#添加反代
+echo "xx.com {
+ gzip
+ tls admin@e-mail.dog
+ proxy / mx.xx.com:3000
+}" > /usr/local/caddy/Caddyfile
+
+#启动caddy
+/etc/init.d/caddy start
+
 ```
