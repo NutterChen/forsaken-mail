@@ -14,19 +14,39 @@ In order to receive emails, your smtp server address should be made available so
 
 You can fire up Mailin (see next section) and use an [smtp server tester](http://mxtoolbox.com/diagnostic.aspx) to verify that everything is correct.
 
-#### Let's Go
-general way:
+#### 搭建教程
 ```
-npm install && npm start
+#安装git
+yum install git -y
+ 
+#安装nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+ 
+#安装nodejs和 npm
+nvm install 6.10.0
+ 
+#查看nodejs版本是否正确，显示 6.10.0
+node -v
+ 
+#下载项目源码
+git clone https://github.com/malaohu/forsaken-mail.git
+cd forsaken-mail
+ 
+#安装项目需要的库
+npm install
+ 
+#安装pm2工具
+npm install -g pm2
+ 
+#禁用postfix
+postfix stop
+chkconfig --level 2345 postfix off
+ 
+#启动项目
+pm2 start bin/www
+#设置开机启动
+pm2 startup
+pm2 save
 ```
-if you want to run this inside a docker container
-```
-docker build -t denghongcai/forsaken-mail .
-docker run --name forsaken-mail -d -p 25:25 -p 3000:3000 denghongcai/forsaken-mail
-```
-Open your browser and type in
-```
-http://localhost:3000
-```
-
-Enjoy!
