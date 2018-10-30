@@ -45,11 +45,14 @@ pm2 startup
 pm2 save
 ```
 ### 配置443端口
+如果你不习惯使用http//mx.xx.com:3000，或者想使用Https域名访问主界面，那我们可以使用Caddy反代。
+
+这里所使用的域名只能是上面设置MX记录的xx.com，并提前将域名A记录解析到服务器IP。
 ```
 #安装caddy
 wget -N --no-check-certificate https://www.moerats.com/usr/shell/Caddy/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh install http.filemanager
 
-#添加反代
+#添加反代（全部内容是一个整体，请修改2个域名后一起复制到SSH运行）
 echo "xx.com {
  gzip
  tls admin@e-mail.dog
